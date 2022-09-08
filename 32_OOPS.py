@@ -1,6 +1,8 @@
 from user import User, Student, Faculty, TempFaculty, StudentFaculty
 from AbstractClass import Car, Bike, Vehicle
+import GuessthenoGame as g
 
+g.guesstheno()
 # user1 = User("Venkatesh", "test123")
 # user2 = User("DOO", "test123")
 # user3 = User("Test", "test123")
@@ -72,8 +74,26 @@ Hi Student doo
 Hello Student Faculty
 '''
 
-car1 = Car().start()  # You are riding a Car...
+
+# car1 = Car().start()  # You are riding a Car...
 
 # veh = Vehicle().start()  # Can't instantiate abstract class Vehicle with abstract method start
 
-bike = Bike().start()  # Can't instantiate abstract class Bike with abstract method start
+# bike = Bike().start()  # Can't instantiate abstract class Bike with abstract method start
+
+
+# Passing object
+def set_color(obj, color):
+    obj.color = color
+    obj.start()
+    # duck typing - giving importance to method than the objects
+
+
+car1 = Car()
+bike1 = Bike()
+
+set_color(car1, "blue ")
+set_color(bike1, "black")
+
+print(car1.color)
+print(bike1.color)

@@ -1,3 +1,23 @@
+"""
+Access specifiers are by convention and python will not restrict
+like other language. All the below are by convention
+
+private (__with_double_underscore)
+--> This should access only within the class.
+--> This is also called Dunder variables, methods
+ ==> __variable
+ ==> def __register(self):
+
+Protected (_with_single_underscore)
+--> This should be accessed within the class and also from the
+    derived class
+ ==> _variable
+ ==> def _register(self):
+
+ __variables__ --> Pythons internal variable.
+"""
+
+
 class User:
     users = 0
 
@@ -72,6 +92,7 @@ In python first
 3 --> then it will call User class greet() mtehod
 '''
 
+
 # Multiple Inheritance
 # Try to avoid Multiple inheritance.
 # StudentFaculty --> Student, Faculty
@@ -79,5 +100,3 @@ class StudentFaculty(Student, Faculty):
     def greet(self):
         super().greet()
         print("Hello Student Faculty")
-
-

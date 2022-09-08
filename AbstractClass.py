@@ -20,10 +20,12 @@ class Vehicle(ABC):
 # in the abstract class. if not implemented Bike class also
 # treated as an abstract class.
 class Bike(Vehicle):  # Concrete class
+    color = None
     def start(self):
         print("you are driving a bike")
 
 
 class Car(Vehicle):
+    color = None
     def start(self):
         print("You are riding a Car...")
